@@ -39,6 +39,7 @@ public class Monomial extends Expression implements Comparable<Monomial> {
 			}
 		}
 		System.out.println("这里是第一次修改");
+		System.out.println("这里是对B1的修改");
 		constVaule = 1;
 		varNumber = 0;
 		varIndex = new TreeMap<String, Integer>();

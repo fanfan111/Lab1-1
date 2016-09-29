@@ -142,6 +142,7 @@ public class Polynomial extends Expression {
 		
 		if (!isNegEx) {
 			//check character
+			System.out.println("这里是对B1的修改");
 			Pattern p0 = Pattern.compile("[^a-zA-Z0-9\\+\\-\\*\\^\\(\\)\\s]");
 			Matcher m0 = p0.matcher(expString);	
 			if (m0.find()) {
