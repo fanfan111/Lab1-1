@@ -104,7 +104,7 @@ public class Polynomial extends Expression {
 		m.appendTail(sb);
 		expString = sb.toString();
 		chars = expString.toCharArray();
-		
+		System.out.println("这里是在C4上面的修改");
 		
 		//check - and fix - to +#*
 		int realCount = 0;

@@ -31,6 +31,8 @@ public class ExpressionTree {
 				if (t.left!=null || t.right!=null) {
 					throw new ExpressionException("Internal Error");
 				}
+				System.out.println("这里是在C4上面的修改");
+
 				return (Polynomial)t.exp;
 			}
 		}
