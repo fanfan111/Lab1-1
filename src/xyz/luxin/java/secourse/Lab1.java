@@ -61,6 +61,8 @@ public class Lab1 {
 					} else {
 						poly = pTmp;
 						System.out.println(poly);
+						System.out.println("这里是对B2做的修改");
+
 					}
 					continue;
 				} else if (command.substring(0, 9).equals("!simplify")) {
