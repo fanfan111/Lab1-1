@@ -34,7 +34,7 @@ public class Lab1 {
 			System.out.print(">");
 			Scanner sc = new Scanner(System.in);
 			String command = sc.nextLine();
-
+			System.out.println("这里是第一次修改");
 			if ((command.toCharArray())[0] != '!') {
 				try {
 					poly = expression(command);

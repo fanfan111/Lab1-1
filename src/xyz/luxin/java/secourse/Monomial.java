@@ -38,7 +38,7 @@ public class Monomial extends Expression implements Comparable<Monomial> {
 				throw new ExpressionException("Unknown Character");
 			}
 		}
-		
+		System.out.println("这里是第一次修改");
 		constVaule = 1;
 		varNumber = 0;
 		varIndex = new TreeMap<String, Integer>();
