@@ -44,7 +44,7 @@ public class Monomial extends Expression implements Comparable<Monomial> {
 		varNumber = 0;
 		varIndex = new TreeMap<String, Integer>();
 		monIndex = 0;
-		
+		System.out.println("这里是在C4上面的修改");
 		if (isExtraNegative) {
 			constVaule = -1;
 		}

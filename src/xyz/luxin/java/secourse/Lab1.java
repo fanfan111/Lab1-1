@@ -61,7 +61,9 @@ public class Lab1 {
 					} else {
 						poly = pTmp;
 						System.out.println(poly);
-						System.out.println("这里是对B1的修改");
+
+						System.out.println("这里是对C4和B1合并冲突处理过位置");
+
 					}
 					continue;
 				} else if (command.substring(0, 9).equals("!simplify")) {
