@@ -62,7 +62,7 @@ public class Lab1 {
 						poly = pTmp;
 						System.out.println(poly);
 
-						System.out.println("这里是对C4和B1合并冲突处理过位置");
+						System.out.println("这里是对C4/B1/B2合并冲突处理过位置");
 
 					}
 					continue;
