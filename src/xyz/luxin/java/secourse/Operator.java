@@ -2,7 +2,7 @@ package xyz.luxin.java.secourse;
 
 public class Operator extends Expression {
 	
-	public char op;//C4
+	public char op;
 	
 	public Operator(char op) throws ExpressionException {
 		if (op=='+' || op=='-' || op=='*' || op=='^') {
@@ -10,7 +10,7 @@ public class Operator extends Expression {
 		} else {
 			throw new ExpressionException("Operator Illegal");
 		}
-	}//B1
+	}
 	
 	@Override
 	public String toString() {
