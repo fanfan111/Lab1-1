@@ -2,7 +2,7 @@ package xyz.luxin.java.secourse;
 
 public class Operator extends Expression {
 	
-	public char op;
+	public char op;//C4
 	
 	public Operator(char op) throws ExpressionException {
 		if (op=='+' || op=='-' || op=='*' || op=='^') {
