@@ -10,7 +10,7 @@ public class Operator extends Expression {
 		} else {
 			throw new ExpressionException("Operator Illegal");
 		}
-	}
+	}//B1
 	
 	@Override
 	public String toString() {
