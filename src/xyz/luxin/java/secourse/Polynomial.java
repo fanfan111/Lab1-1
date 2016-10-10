@@ -104,7 +104,8 @@ public class Polynomial extends Expression {
 		m.appendTail(sb);
 		expString = sb.toString();
 		chars = expString.toCharArray();
-		
+
+		System.out.println("这里是在C4上面的修改");
 		
 		//check - and fix - to +#*
 		int realCount = 0;
@@ -142,6 +143,8 @@ public class Polynomial extends Expression {
 		
 		if (!isNegEx) {
 			//check character
+			System.out.println("这里是对B1的修改");
+
 			Pattern p0 = Pattern.compile("[^a-zA-Z0-9\\+\\-\\*\\^\\(\\)\\s]");
 			Matcher m0 = p0.matcher(expString);	
 			if (m0.find()) {
@@ -189,7 +192,9 @@ public class Polynomial extends Expression {
 			}
 			
 			Monomial mono = new Monomial(m1.group(0), isExtraNegative, isNegEx);
-			
+
+			System.out.println("这里是对B2做的修改");
+
 			if (mMonos.containsKey(mono)) {
 				//Map中已存在的单项式与get参数的单项式不是一个对象，两者仅系数不同
 				Integer n = mMonos.get(mono);

@@ -35,6 +35,8 @@ public class Lab1 {
 			Scanner sc = new Scanner(System.in);
 			String command = sc.nextLine();
 
+			System.out.println("这里是第一次修改");
+
 			if ((command.toCharArray())[0] != '!') {
 				try {
 					poly = expression(command);
@@ -61,6 +63,9 @@ public class Lab1 {
 					} else {
 						poly = pTmp;
 						System.out.println(poly);
+
+						System.out.println("这里是对C4/B1/B2合并冲突处理过位置");
+
 					}
 					continue;
 				} else if (command.substring(0, 9).equals("!simplify")) {
