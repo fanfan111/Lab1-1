@@ -1,10 +1,16 @@
 package xyz.luxin.java.secourse;
 
 @SuppressWarnings("serial")
-public class ExpressionException extends Exception
-{
-	public ExpressionException(String msg)
-	{
-		super(msg);
-	}
+/**
+ * .
+ * @author Bacon
+ */
+public class ExpressionException extends Exception {
+  /**
+   * .
+   * @param msg .
+   */
+  public ExpressionException(final String msg) {
+    super(msg);
+  }
 } 
