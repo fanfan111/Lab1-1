@@ -78,8 +78,21 @@ public class Lab1 {
       }
 
       try {
+        if (command.length() < 5) {
+          System.out.println("Input Error");
+          continue;
+        }
         if (command.substring(0, 4).equals("!d/d")) {
-          final String var = command.substring(4, command.length());
+          String var = command.substring(4, command.length());
+          final Pattern pp0 = Pattern.compile("\\s*([a-zA-Z]+)\\s*");
+          final Matcher mm0 = pp0.matcher(var);  
+          if (mm0.matches()) {
+            var = mm0.group(1);
+          } else {
+            System.out.println("Input Error");
+            continue;
+          }
+          
           final Polynomial ppTmp = derivative(poly, var);
           if (ppTmp.toString().equals("0")) {
             System.out.println("Var Not Found");
