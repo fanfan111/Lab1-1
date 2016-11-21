@@ -1,4 +1,4 @@
-package blackBoxTesting;
+package Test.blackBoxTesting;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
@@ -22,7 +22,7 @@ public class Test5 {
 	@Test
 	public void testExpression(){
 		/*
-		 * æµ‹è¯•ç”¨ä¾‹5  æµ‹è¯•ä»£ç 
+		 * ²âÊÔÓÃÀı5  ²âÊÔ´úÂë
 		 */
 		String inputString ="(67fan^(1+3)+WeAreNotTheSameVa"+
 		"riable+	(888y+  We are not the same variable+("+
