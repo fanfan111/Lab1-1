@@ -25,7 +25,10 @@ public class Polynomial extends Expression {
 	
 	public Polynomial(String expString) throws ExpressionException {
 		//Does not support "Negative Extension"(#) by default.
-		this(expString, false);
+		this();
+		if(!expString.equals("")) {
+		  expression(expString, false);
+		}
 	}
 	
 	public Polynomial(Monomial m) {
@@ -38,13 +41,11 @@ public class Polynomial extends Expression {
 	}
 	
 	public void expressionBracket(String expString) throws ExpressionException {
-		
 		Pattern p;
 		Matcher m;
 		StringBuffer sb;
 		char[] chars = expString.toCharArray();
 
-		
 		//check character
 		Pattern p1 = Pattern.compile("[^a-zA-Z0-9\\+\\-\\*\\^\\(\\)\\s]");
 		Matcher m1 = p1.matcher(expString);	
@@ -211,7 +212,6 @@ public class Polynomial extends Expression {
 	}
 	
 	public Polynomial simplify(TreeMap<String, Integer> pairs) {
-		
 		TreeMap<Monomial, Integer> result = new TreeMap<Monomial, Integer>();
 		
 		Iterator<Entry<Monomial, Integer>> it = mMonos.entrySet().iterator();
@@ -241,9 +241,9 @@ public class Polynomial extends Expression {
 		while (it.hasNext()) {
 			Entry<Monomial, Integer> entry = (Entry<Monomial, Integer>)it.next();
 			Monomial m = entry.getKey().derivative(var);
-			
+
 			if (result.containsKey(m)) {
-				
+
 				Integer n = result.get(m);
 				m.constVaule = m.constVaule + n;
 				result.remove(m);

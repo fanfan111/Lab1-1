@@ -21,7 +21,7 @@ public class Lab1 {
 	public static String derivative(String polyInput, String command) 
 			throws ExpressionException {
 		String var = command.substring(5, command.length());
-		Polynomial pTmp = poly.derivative(var);
+		Polynomial pTmp = (new Polynomial(polyInput)).derivative(var);
 		if (pTmp.toString().equals("0")) {
 			return "Var Not Found";
 		} else {
