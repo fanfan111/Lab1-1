@@ -5,12 +5,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import xyz.luxin.java.secourse.Control;
 import xyz.luxin.java.secourse.ExpressionException;
-import xyz.luxin.java.secourse.Lab1;
 
 
 public class Test3 {
-  private static Lab1 testLab1 = new Lab1();
 
   @Before
   public void setUp() throws Exception {}
@@ -28,7 +27,7 @@ public class Test3 {
     String resultString = "x";
 
     try {
-      assertEquals(resultString, testLab1.derivative(polyInputString, commandString));
+      assertEquals(resultString, Control.derivative(polyInputString, commandString));
     } catch (ExpressionException e) {
       e.printStackTrace();
     }

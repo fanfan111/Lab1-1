@@ -4,12 +4,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import xyz.luxin.java.secourse.Control;
 import xyz.luxin.java.secourse.ExpressionException;
-import xyz.luxin.java.secourse.Lab1;
 
 
 public class Test3 {
-	private static Lab1 testLab1=new Lab1();
 	
 	@Before
 	public void setUp() throws Exception {
@@ -31,7 +30,7 @@ public class Test3 {
 		"(67x*x*x+   (888y*y*x+(45x^10+(13x^19y^12))"+
 		"))))))))))))))";
 		try {
-			testLab1.expression(inputString,testLab1.poly);
+		    Control.expression(inputString);
 		} catch (ExpressionException e) { 
 	        assertTrue(e.getMessage().equals("Format Error")); 
 		}

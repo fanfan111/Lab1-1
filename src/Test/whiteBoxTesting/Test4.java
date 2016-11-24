@@ -3,15 +3,14 @@ package Test.whiteBoxTesting;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import xyz.luxin.java.secourse.Control;
 import xyz.luxin.java.secourse.ExpressionException;
-import xyz.luxin.java.secourse.Lab1;
 
 import org.junit.After;
 import org.junit.Before;
 
 
 public class Test4 {
-  private static Lab1 testLab1 = new Lab1();
 
   @Before
   public void setUp() throws Exception {}
@@ -29,7 +28,7 @@ public class Test4 {
     String resultString = "2*z";
 
     try {
-      assertEquals(resultString, testLab1.derivative(polyInputString, commandString));
+      assertEquals(resultString, Control.derivative(polyInputString, commandString));
     } catch (ExpressionException e) {
       e.printStackTrace();
     }
