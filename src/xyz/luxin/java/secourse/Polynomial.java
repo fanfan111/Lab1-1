@@ -15,12 +15,14 @@ public class Polynomial extends Expression {
 	}
 	
 	public Polynomial(String expString, boolean isNegEx) throws ExpressionException {
-		mMonos = new TreeMap<Monomial, Integer>();
-		if (isNegEx) {
-			expression(expString, true);
-		} else {
-			expression(expString, false);
-		}
+	    this();
+	    if(!expString.equals("")) {
+    		if (isNegEx) {
+    			expression(expString, true);
+    		} else {
+    			expression(expString, false);
+    		}
+	    }
 	}
 	
 	public Polynomial(String expString) throws ExpressionException {
@@ -129,7 +131,7 @@ public class Polynomial extends Expression {
 		chars = expString.toCharArray();
 		
 		if (realCount != matchCount) {
-			throw new ExpressionException("Format Error");
+		    throw new ExpressionException("Format Error");
 		}
 
 		
@@ -148,6 +150,11 @@ public class Polynomial extends Expression {
 			if (m0.find()) {
 				throw new ExpressionException("Unknown Character");
 			}
+		}
+		
+		//support first '-'
+		if (expString.length()>0 && expString.charAt(0)=='-') {
+		    expString = "#*" + expString.substring(1, expString.length());
 		}
 		
 		String pFactor = "(#|(\\d+\\^\\d+)|([a-zA-Z]+\\^\\d+)|(\\d+)|([a-zA-Z]+))";

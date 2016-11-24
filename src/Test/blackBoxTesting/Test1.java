@@ -3,14 +3,13 @@ package Test.blackBoxTesting;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import xyz.luxin.java.secourse.Control;
 import xyz.luxin.java.secourse.ExpressionException;
-import xyz.luxin.java.secourse.Lab1;
 
 import org.junit.After;
 import org.junit.Before;
 
 public class Test1 {
-	private static Lab1 testLab1=new Lab1();
 	
 	@Before
 	public void setUp() throws Exception {
@@ -35,8 +34,7 @@ public class Test1 {
 		"variable+45*zoo^9+45*x^10+67*x^11+13*x^7*y^11"+
 		"+13*lx^7*y^12+13*x^9*y^12+13*x^19*y^12";
         try {
-			assertEquals(resultString,testLab1
-					.expression(inputString,testLab1.poly));
+			assertEquals(resultString, Control.expression(inputString));
 		} catch (ExpressionException e) {
 			e.printStackTrace();
 		}

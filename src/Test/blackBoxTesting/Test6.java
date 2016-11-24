@@ -3,14 +3,13 @@ package Test.blackBoxTesting;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import xyz.luxin.java.secourse.Control;
 import xyz.luxin.java.secourse.ExpressionException;
-import xyz.luxin.java.secourse.Lab1;
 
 import org.junit.After;
 import org.junit.Before;
 
 public class Test6 {
-	private static Lab1 testLab1=new Lab1();
 	
 	@Before
 	public void setUp() throws Exception {
@@ -32,7 +31,7 @@ public class Test6 {
 		"7y^11+(67x*x*x+   (888y*y*x+(45x^10+(13x^19"+
 		"y^12))))))))))))))))";
 		try {
-			testLab1.expression(inputString,testLab1.poly);
+		    Control.expression(inputString);
 		} catch (ExpressionException e) { 
 	        assertTrue(e.getMessage().equals("Format Error")); 
 		}
